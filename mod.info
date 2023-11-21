@@ -1,5 +1,5 @@
-name=Clear Skill Descriptions
+name=Skills and Traits Explained
 poster=poster.png
-id=clearSkillDescriptions
-description=Shows Perk descriptions, what they affect and how to level them in their respective tooltips
-url=
+id=AT_SkillsTraitsExplained
+description=Shows information about Skills and Traits in their Character Panel Tooltips. Now you know how to level a skill or what it actually does!
+url=https://steamcommunity.com/id/actic/

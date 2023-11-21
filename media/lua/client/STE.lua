@@ -1,7 +1,13 @@
+--#################################
+--####		MOD BY ACTIC		###
+--#################################
+
+
 require "XpSystem/ISUI/ISSkillProgressBar"
+require "XpSystem/ISUI/ISCharacterScreen"
 
 -- Skills
-local CSDskills = {
+local STEskills = {
 	fitness = {
 		name = "Fitness",
 		desc = "Increases endurance and attack speed",
@@ -125,6 +131,7 @@ local CSDskills = {
 	}
 }
 
+
 -- override vanilla function
 function ISSkillProgressBar:updateTooltip(lvlSelected)
 	-- we display the correct message
@@ -135,7 +142,7 @@ function ISSkillProgressBar:updateTooltip(lvlSelected)
 	-- MOD BEGIN --
 
 	-- Show basic description of what the skill does
-	for k, v in pairs(CSDskills) do
+	for k, v in pairs(STEskills) do
 		if string.find(v.name, self.perk:getName()) then
 			self.message = self.message .. " <LINE> <LINE> " .. v.desc
 			self.message = self.message .. " <LINE> <LINE> " .. v.prog .. " <LINE> "
@@ -171,4 +178,32 @@ function ISSkillProgressBar:updateTooltip(lvlSelected)
     if percentage then
         self.message = self.message .. " <LINE> " .. getText("IGUI_XP_tooltipxpboost", percentage);
     end
+end
+
+
+--override vanilla function
+ISCharacterScreen.loadTraits = function(self)
+
+	for _,image in ipairs(self.traits) do
+		self:removeChild(image)
+	end
+	table.wipe(self.traits);
+	self:setDisplayedTraits()
+	for _,trait in ipairs(self.displayedTraits) do
+		local textImage = ISImage:new(0, 0, trait:getTexture():getWidthOrig(), trait:getTexture():getHeightOrig(), trait:getTexture());
+		textImage:initialise();
+
+		-- MOD BEGIN --
+
+		textImage:setMouseOverText(trait:getLabel() .. " <LINE> " .. trait:getDescription());
+
+		-- MOD END --
+
+		textImage:setVisible(false);
+		textImage.trait = trait;
+		self:addChild(textImage);
+		table.insert(self.traits, textImage);
+	end
+	self.Strength = self.char:getPerkLevel(Perks.Strength)
+	self.Fitness = self.char:getPerkLevel(Perks.Fitness)
 end
