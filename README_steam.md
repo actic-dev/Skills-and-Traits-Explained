@@ -17,5 +17,12 @@ Skill descriptions are maintained by myself. If you want to contribute to transl
 [*]German (will be added soon)
 [/list]
 
+[h1]Planned Features[/h1]
+
+[list]
+[*]Add detailed percentage values of how each skill level affects the character
+[*]Add Option to toggle detailed values on or off (This mod is aimed towards casual players, therefore i don't want to overwhelm players with numbers by default)
+[/list]
+
 Workshop ID: 3091076559
 Mod ID: AT_SkillsTraitsExplained
