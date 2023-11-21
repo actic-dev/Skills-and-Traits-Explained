@@ -9,124 +9,88 @@ require "XpSystem/ISUI/ISCharacterScreen"
 -- Skills
 local STEskills = {
 	fitness = {
-		name = "Fitness",
-		desc = "Increases endurance and attack speed",
-		prog = "Progress by sprinting, melee attacks and doing Fitness Exercises",
+		id = "Fitness",
 		type = "Passive"
 	},
 	strength = {
-		name = "Strength",
-		desc = "Increases carry capacity and the chance to knock down zombies",
-		prog = "Progress by doing Strength Exercises, carrrying heavy things and running",
+		id = "Strength",
 		type = "Passive"
 	},
 	sprinting = {
-		name = "Sprinting",
-		desc = "Increases running and sprinting speed",
-		prog = "Progress by by running and sprinting",
+		id = "Sprinting",
 		type = "Agility"
 	},
 	lightfooted = {
-		name = "Lightfooted",
-		desc = "Reduces the sound of your footsteps",
-		prog = "Progress by sneaking near zombies without being detected",
+		id = "Lightfoot",
 		type = "Agility"
 	},
 	nimble = {
-		name = "Nimble",
-		desc = "Increases movement speed in Combat Stance and reduces footstep sounds",
-		prog = "Progress by walking in Combat Stance",
+		id = "Nimble",
 		type = "Agility"
 	},
 	sneaking = {
-		name = "Sneaking",
-		desc = "Decreases your footstep sounds and detection chance while sneaking",
-		prog = "Progress by sneaking near zombies without being detected",
+		id = "Sneak",
 		type = "Agility"
 	},
 	combat = {
 		-- One description for all weapon types, as their respective skills affect them in generally the same way
-		name = "Axe/Long Blunt/Short Blunt/Long Blade/Short Blade/Spear",
-		desc = "Increases attack speed, damage and crit chance",
-		prog = "Progress by attacking zombies",
+		id = "Axe/Blunt/SmallBlunt/LongBlade/SmallBlade/Spear",
 		type = "Combat"
 	},
 	maintenance = {
-		name = "Maintenance",
-		desc = "Reduces the chance for a melee weapon to lose condition per use",
-		prog = "Progress by hitting enemies with melee weapons.",
+		id = "Maintenance",
 		type = "Combat"
 	},
 	carpentry = {
-		name = "Carpentry",
-		desc = "Unlocks building options and increases overall effectiveness of repairing, building and barricading",
-		prog = "Progress by barricading, crafting items from planks, dismantling furniture and sawing logs",
+		id = "Woodwork",
 		type = "Crafting"
 	},
 	cooking = {
-		name = "Cooking",
-		desc = "Increases effectiveness of crafted food and chance to detect poison <LINE> Level 7: Safely use rotten ingredients in soups an stews",
-		prog = "Progress by cooking or crafting food",
+		id = "Cooking",
 		type = "Crafting"
 	},
 	farming = {
-		name = "Farming",
-		desc = "Progressively increases the detail of information when checking a crop's status",
-		prog = "Progress by harvesting crops",
+		id = "Farming",
 		type = "Crafting"
 	},
 	firstaid = {
-		name = "First Aid",
-		desc = "Wounds heal faster and cause less pain and movement penalty, perform medical actions faster, bandages last longer, more accurately determine severity of wounds <LINE> Level 3: Determine the severity of wounds",
-		prog = "Progress by performing medical actions",
+		id = "Doctor",
 		type = "Crafting"
 	},
 	electrical =  {
-		name = "Electrical",
-		desc = "Increases the ability to repair generators and create devices, reduces chance of setting off car alarms while hot wiring <LINE> Level 1: hot wire vehicles (req. 2 Mechanics) <LINE> Level 5: Change lights to be battery powered",
-		prog = "Progress by repairing generators, dismantling electronics and crafting makeshift electronics",
+		id = "Electricity",
 		type = "Crafting"
 	},
 	metalworking = {
-		name = "Metalworking",
-		desc = "Unlocks building options and increases durability of metal barricades. Can be helpful to repair certain parts of vehicles",
-		prog = "Progress by building and dismantling metal constructions and barricades",
+		id = "MetalWelding",
+		type = "Crafting"
+	},
+	mechanics = {
+		id = "Mechanics",
 		type = "Crafting"
 	},
 	tailoring = {
-		name = "Tailoring",
-		desc = "Gain the ability to patch and fortify clothing, which becomes progressively more effective <LINE> Higher levels: fully repair clothing, patch holes to their original state",
-		prog = "Progress by repairing and fortifying clothing",
+		id = "Tailoring",
 		type = "Crafting"
 	},
 	aiming = {
-		name = "Aiming",
-		desc = "Improves (movement) accuracy, crit change, range and firing angle of firearms. Reduces the chance for a firearm to lose condition on hit",
-		prog = "Progress by successfully hitting enemies with a firearm",
+		id = "Aiming",
 		type = "Firearm"
 	},
 	reloading = {
-		name = "Reloading",
-		desc = "Decreases the time it takes to reload",
-		prog = "Progress by unloading and repacking magazines and inserting them into any firearm",
+		id = "Reloading",
 		type = "Firearm"
 	},
 	fishing = {
-		name = "Fishing",
-		desc = "Increases proficiency in fishing - more frequent catches and bigger fish",
-		prog = "Progress by fishing with a fishing rod or a spear. Catching a fish is not a requirement, but increases XP",
+		id = "Fishing",
 		type = "Survivalist"
 	},
 	trapping = {
-		name = "Trapping",
-		desc = "Improves chance of catching animals in a trap and gives the ability to make new traps",
-		prog = "Progress by retrieving caught animals",
+		id = "Trapping",
 		type = "Survivalist"
 	},
 	foraging = {
-		name = "Foraging",
-		desc = "Increases radius and chance of finding items in Search mode. With each level you can find new items",
-		prog = "Progress by finding items in Search Mode",
+		id = "PlantScavenging",
 		type = "Survivalist"
 	}
 }
@@ -142,10 +106,10 @@ function ISSkillProgressBar:updateTooltip(lvlSelected)
 	-- MOD BEGIN --
 
 	-- Show basic description of what the skill does
-	for k, v in pairs(STEskills) do
-		if string.find(v.name, self.perk:getName()) then
-			self.message = self.message .. " <LINE> <LINE> " .. v.desc
-			self.message = self.message .. " <LINE> <LINE> " .. v.prog .. " <LINE> "
+	for skill, attributes in pairs(STEskills) do
+		if string.find(attributes.id, self.perk:getId()) then
+			self.message = self.message .. " <LINE> <LINE> " .. getText("Tooltip_STE_" .. skill .. "_desc")
+			self.message = self.message .. " <LINE> <LINE> " .. getText("Tooltip_STE_" .. skill .. "_prog") .. " <LINE> "
 		end
 	end
 
