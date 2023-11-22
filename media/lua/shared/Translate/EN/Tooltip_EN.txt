@@ -1,5 +1,5 @@
 Tooltip_EN = {
-	Tooltip_STE_aiming_desc = "Improves (movement) accuracy, crit change, range and firing angle of firearms. Reduces the chance for a firearm to lose condition on hit",
+	Tooltip_STE_aiming_desc = "Improves (movement) accuracy, crit chance, range and firing angle of firearms. Reduces the chance for a firearm to lose condition on hit",
 	Tooltip_STE_aiming_prog = "Progress by successfully hitting enemies with a firearm",
 	Tooltip_STE_carpentry_desc = "Unlocks building options and increases overall effectiveness of repairing, building and barricading",
 	Tooltip_STE_carpentry_prog = "Progress by barricading, crafting items from planks, dismantling furniture and sawing logs",
@@ -34,11 +34,13 @@ Tooltip_EN = {
 	Tooltip_STE_sneaking_desc = "Decreases your footstep sounds and detection chance while sneaking",
 	Tooltip_STE_sneaking_prog = "Progress by sneaking near zombies without being detected",
 	Tooltip_STE_sprinting_desc = "Increases running and sprinting speed",
-	Tooltip_STE_sprinting_prog = "Progress by by running and sprinting",
+	Tooltip_STE_sprinting_prog = "Progress by running and sprinting",
 	Tooltip_STE_strength_desc = "Increases carry capacity and the chance to knock down zombies",
 	Tooltip_STE_strength_prog = "Progress by doing Strength Exercises, carrrying heavy things and running",
 	Tooltip_STE_tailoring_desc = "Gain the ability to patch and fortify clothing, which becomes progressively more effective <LINE> Higher levels: fully repair clothing, patch holes to their original state",
 	Tooltip_STE_tailoring_prog = "Progress by repairing and fortifying clothing",
 	Tooltip_STE_trapping_desc = "Improves chance of catching animals in a trap and gives the ability to make new traps",
-	Tooltip_STE_trapping_prog = "Progress by retrieving caught animals"
+	Tooltip_STE_trapping_prog = "Progress by retrieving caught animals",
+	Tooltip_STE_mod_scavenging_desc = "Increases the chance to find extra loot in containers",
+	Tooltip_STE_mod_scavenging_prog = "Progress by looting containers"
 }

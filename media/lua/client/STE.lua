@@ -16,6 +16,10 @@ local STEskills = {
 		id = "Strength",
 		type = "Passive"
 	},
+	mod_scavenging = {
+		id = "Scavenging",
+		type = "Passive"
+	},
 	sprinting = {
 		id = "Sprinting",
 		type = "Agility"
