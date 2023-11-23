@@ -1,0 +1,3 @@
+IGUI_EN = {
+    IGUI_STE_showSkillLevelStats = "Show detailed Stats for each Skill Level"
+}

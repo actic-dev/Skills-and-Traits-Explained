@@ -1,0 +1,3 @@
+IGUI_DE = {
+    IGUI_STE_showSkillLevelStats = "Genaue Statistiken für jede Fähigkeitenstufe anzeigen"
+}

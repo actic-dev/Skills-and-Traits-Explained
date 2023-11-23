@@ -3,17 +3,18 @@ Shows information about Skills and Traits in their Character Panel Tooltips. Now
 # Compatibility
 
 This mod is compatible with modded traits like [Dynamic Traits](https://steamcommunity.com/sharedfiles/filedetails/?id=2459400130), so you will be able to know what that fancy new trait that you just got actually does!
-Supports [Scavenging Skill](https://steamcommunity.com/sharedfiles/filedetails/?id=2903135820).
+You can see detailed stat changes by hovering over each Skill Level (Configurable with [Mod Options](https://steamcommunity.com/sharedfiles/filedetails/?id=2169435993) - Default: ON).
+Supports [Scavenging Skill](https://steamcommunity.com/sharedfiles/filedetails/?id=2903135820) and [Lifestyles: Hobbies](https://steamcommunity.com/sharedfiles/filedetails/?id=2997342681&searchtext=lifes).
 Can be added and removed from existing save files at any time.
-
-# Translations
-
-Trait descriptions will be translated automatically. If you have additional trait mods installed, they should work as long as the mod itself supports your language.
-Skill descriptions are maintained by myself. If you want to contribute to translating this skill descriptions to your language, you're welcome to do so!
 
 # Multiplayer?
 
 Yes!
+
+# Translations
+
+Trait descriptions will be translated automatically. If you have additional trait mods installed, they should work as long as the mod itself supports your language.
+Skill descriptions are maintained by myself. If you want to contribute to translating the skill descriptions to your language, you're welcome to do so!
 
 **Currently supported Language(s)**
 
@@ -26,5 +27,34 @@ Yes!
 -   Add detailed percentage values of how each skill level affects the character
 -   Add Option to toggle detailed values on or off (This mod is aimed towards casual players, therefore i don't want to overwhelm players with numbers by default)
 
-Workshop ID: 3091076559
-Mod ID: AT_SkillsTraitsExplained
+# Changelog
+
+> ### Update 1.3:
+>
+> -   New: Display accurate percentages about how the character is being affected by each level
+> -   Can be configured with Mod Options
+> -   Added Support foe Lifestyle:Hobbies mod
+> -   Added more accurate description for Short Blades Skill
+> -   Touched up some Skill descriptions
+>
+> 23 Nov
+
+> ### Update 1.2:
+>
+> -   Added German and Spanish translations
+> -   Added Support for Scavenging Skill Mod
+>
+> 22 Nov @ 5:49pm
+
+> ### Update 1.1:
+>
+> -   Added Translation Support, now functions on every language and defaults to english decriptions if translation is not yet present
+> -   Fixed Mechanics Skill
+>
+> 21 Nov @ 10:40pm
+
+> ### Release 1.0
+>
+> Initial Release
+>
+> 21 Nov @ 7:20pm
