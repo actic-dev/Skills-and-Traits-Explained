@@ -1,10 +1,15 @@
 Shows information about Skills and Traits in their Character Panel Tooltips. Now you know how to level a skill or what it actually does!
+You can see detailed stat changes by hovering over each Skill Level (Configurable with [Mod Options](https://steamcommunity.com/sharedfiles/filedetails/?id=2169435993) - Default: ON).
 
 # Compatibility
 
-This mod is compatible with modded traits like [Dynamic Traits](https://steamcommunity.com/sharedfiles/filedetails/?id=2459400130), so you will be able to know what that fancy new trait that you just got actually does!
-You can see detailed stat changes by hovering over each Skill Level (Configurable with [Mod Options](https://steamcommunity.com/sharedfiles/filedetails/?id=2169435993) - Default: ON).
-Supports [Scavenging Skill](https://steamcommunity.com/sharedfiles/filedetails/?id=2903135820) and [Lifestyles: Hobbies](https://steamcommunity.com/sharedfiles/filedetails/?id=2997342681&searchtext=lifes).
+**Compatible and supported mods include but are not limited to:**
+
+-   [Cleaer Descriptions for Moodles](https://steamcommunity.com/sharedfiles/filedetails/?id=2763647806&searchtext=mood)
+-   [Dynamic Traits](https://steamcommunity.com/sharedfiles/filedetails/?id=2459400130)
+-   [Lifestyles: Hobbies](https://steamcommunity.com/sharedfiles/filedetails/?id=2997342681&searchtext=lifes)
+-   [Scavenging Skill](https://steamcommunity.com/sharedfiles/filedetails/?id=2903135820)
+
 Can be added and removed from existing save files at any time.
 
 # Multiplayer?
@@ -21,11 +26,6 @@ Skill descriptions are maintained by myself. If you want to contribute to transl
 -   English
 -   German
 -   Spanish (Thanks to [CarlosRojasCu](https://steamcommunity.com/profiles/76561198874558693/) for the translation)
-
-# Planned Features
-
--   Add detailed percentage values of how each skill level affects the character
--   Add Option to toggle detailed values on or off (This mod is aimed towards casual players, therefore i don't want to overwhelm players with numbers by default)
 
 # Changelog
 
@@ -44,17 +44,17 @@ Skill descriptions are maintained by myself. If you want to contribute to transl
 > -   Added German and Spanish translations
 > -   Added Support for Scavenging Skill Mod
 >
-> 22 Nov @ 5:49pm
+> 22 Nov
 
 > ### Update 1.1:
 >
 > -   Added Translation Support, now functions on every language and defaults to english decriptions if translation is not yet present
 > -   Fixed Mechanics Skill
 >
-> 21 Nov @ 10:40pm
+> 21 Nov
 
 > ### Release 1.0
 >
 > Initial Release
 >
-> 21 Nov @ 7:20pm
+> 21 Nov

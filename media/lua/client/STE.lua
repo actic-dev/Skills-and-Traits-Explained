@@ -8,7 +8,7 @@ require "XpSystem/ISUI/ISCharacterScreen"
 require "STEskills"
 
 -- mod options support
-local SETTINGS = {
+local STE_SETTINGS = {
   options = { 
     showSkillLevelStats = true,
   },
@@ -21,7 +21,7 @@ local SETTINGS = {
 
 -- Mod Settings - Connecting the options to the menu, so user can change and save them.
 if ModOptions and ModOptions.getInstance then
-	ModOptions:getInstance(SETTINGS)
+	ModOptions:getInstance(STE_SETTINGS)
 end
 
 
@@ -36,21 +36,25 @@ function ISSkillProgressBar:updateTooltip(lvlSelected)
 	STEskill = self.perk:getId()
 	Translation_Id = STEskill
 
-	-- Check, if there is a parent set - if yes, use the parent's data
-	if STEskills[STEskill].parent then 
-		Translation_Id = STEskills[STEskill].parent 
-	end
+	-- check if the skill exists in STEskills.lua
+	if type(STEskills[STEskill]) == "table" then
 
-	-- Show basic description of what the skill does
-	if getText("Tooltip_STE_" .. Translation_Id .. "_desc") then
-		self.message = self.message .. " <LINE> <LINE> " .. getText("Tooltip_STE_" .. Translation_Id .. "_desc")
-		self.message = self.message .. " <LINE> <LINE> " .. getText("Tooltip_STE_" .. Translation_Id .. "_prog")
-	end
+		-- Check, if there is a parent set - if yes, use the parent's data
+		if STEskills[STEskill].parent then 
+			Translation_Id = STEskills[STEskill].parent 
+		end
 
-	self.message = self.message .. " <LINE> <LINE> " .. xpSystemText.lvl .. lvlSelected + 1 .. " - "
+		-- Show basic description of what the skill does
+		if getText("Tooltip_STE_" .. Translation_Id .. "_desc") then
+			self.message = self.message .. " <LINE> <LINE> " .. getText("Tooltip_STE_" .. Translation_Id .. "_desc")
+			self.message = self.message .. " <LINE> <LINE> " .. getText("Tooltip_STE_" .. Translation_Id .. "_prog")
+		end
+
+	end
 
 	-- MOD END --
 
+	self.message = self.message .. " <LINE> <LINE> " .. xpSystemText.lvl .. lvlSelected + 1 .. " - "
 
 	if lvlSelected < self.level then
 		self.message = self.message .. xpSystemText.unlocked;
@@ -79,14 +83,23 @@ function ISSkillProgressBar:updateTooltip(lvlSelected)
         self.message = self.message .. " <LINE> " .. getText("IGUI_XP_tooltipxpboost", percentage);
     end
 
+	-- MOD BEGIN --
 
-	if SETTINGS.options.showSkillLevelStats then
-		if type(STEskills[STEskill].levelstats) == "table" then
-			for stat, statlvls in pairs(STEskills[STEskill].levelstats) do
-				self.message = self.message .. " <LINE> " .. getText("Tooltip_STE_levelstats_" .. stat) .. ": " .. statlvls[lvlSelected + 1]
+	-- check if the skill exists in STEskills.lua
+	if type(STEskills[STEskill]) == "table" then
+		if STE_SETTINGS.options.showSkillLevelStats then
+			-- check if the skill has defined levelstats
+			if type(STEskills[STEskill].levelstats) == "table" then
+				for stat, statlvls in pairs(STEskills[STEskill].levelstats) do
+					-- check if there are stats for the currently selected level
+					if statlvls[lvlSelected + 1] then
+						self.message = self.message .. " <LINE> " .. getText("Tooltip_STE_levelstats_" .. stat) .. ": " .. statlvls[lvlSelected + 1]
+					end
+				end
 			end
 		end
 	end
+
 	-- MOD END --
 
 end
