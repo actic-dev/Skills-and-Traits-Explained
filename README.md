@@ -26,8 +26,15 @@ Skill descriptions are maintained by myself. If you want to contribute to transl
 -   English
 -   German
 -   Spanish (Thanks to [CarlosRojasCu](https://steamcommunity.com/profiles/76561198874558693/) for the translation)
+-   Russian (Thanks to [Mr Vi](https://steamcommunity.com/id/vi_dev0/) for the translation)
 
 # Changelog
+
+> ### Update 1.4:
+>
+> -   Added Russian translation
+>
+> 08 Jan 2024
 
 > ### Update 1.3:
 >
@@ -37,24 +44,24 @@ Skill descriptions are maintained by myself. If you want to contribute to transl
 > -   Added more accurate description for Short Blades Skill
 > -   Touched up some Skill descriptions
 >
-> 23 Nov
+> 23 Nov 2023
 
 > ### Update 1.2:
 >
 > -   Added German and Spanish translations
 > -   Added Support for Scavenging Skill Mod
 >
-> 22 Nov
+> 22 Nov 2023
 
 > ### Update 1.1:
 >
 > -   Added Translation Support, now functions on every language and defaults to english decriptions if translation is not yet present
 > -   Fixed Mechanics Skill
 >
-> 21 Nov
+> 21 Nov 2023
 
 > ### Release 1.0
 >
 > Initial Release
 >
-> 21 Nov
+> 21 Nov 2023

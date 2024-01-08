@@ -6,10 +6,10 @@ You can see detailed stat changes by hovering over each Skill Level (Configurabl
 [b]Compatible and supported mods include but are not limited to:[/b]
 
 [list]
-[\*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2763647806&searchtext=mood]Cleaer Descriptions for Moodles[/url]
-[\*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2459400130]Dynamic Traits[/url]
-[\*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2997342681&searchtext=lifes]Lifestyles: Hobbies[/url]
-[\*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2903135820]Scavenging Skill[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2763647806&searchtext=mood]Cleaer Descriptions for Moodles[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2459400130]Dynamic Traits[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2997342681&searchtext=lifes]Lifestyles: Hobbies[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2903135820]Scavenging Skill[/url]
 [/list]
 
 Can be added and removed from existing save files at any time.
@@ -29,9 +29,18 @@ Skill descriptions are maintained by myself. If you want to contribute to transl
 [*]English
 [*]German
 [*]Spanish (Thanks to [url=https://steamcommunity.com/profiles/76561198874558693/]CarlosRojasCu[/url] for the translation)
+[*]Russian (Thanks to [url=https://steamcommunity.com/id/vi_dev0/]Mr Vi[/url] for the translation)
 [/list]
 
 [h1]Changelog[/h1]
+
+[quote][h3]Update 1.4:[/h3]
+
+[list]
+[*]Added Russian translation
+[/list]
+
+08 Jan 2024[/quote]
 
 [quote][h3]Update 1.3:[/h3]
 
@@ -43,7 +52,7 @@ Skill descriptions are maintained by myself. If you want to contribute to transl
 [*]Touched up some Skill descriptions
 [/list]
 
-23 Nov[/quote]
+23 Nov 2023[/quote]
 
 [quote][h3]Update 1.2:[/h3]
 
@@ -52,7 +61,7 @@ Skill descriptions are maintained by myself. If you want to contribute to transl
 [*]Added Support for Scavenging Skill Mod
 [/list]
 
-22 Nov[/quote]
+22 Nov 2023[/quote]
 
 [quote][h3]Update 1.1:[/h3]
 
@@ -61,10 +70,10 @@ Skill descriptions are maintained by myself. If you want to contribute to transl
 [*]Fixed Mechanics Skill
 [/list]
 
-21 Nov[/quote]
+21 Nov 2023[/quote]
 
 [quote][h3]Release 1.0[/h3]
 
 Initial Release
 
-21 Nov[/quote]
+21 Nov 2023[/quote]
